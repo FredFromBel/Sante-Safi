@@ -3,189 +3,112 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Téléconsultation infirmière via WhatsApp — Congo</title>
-  <meta name="description" content="Téléconsultation infirmière via WhatsApp Business. Horaires, tarifs, paiement Mobile Money, contact direct." />
-  <style>
-    :root{
-      --bg:#0b0f17;
-      --panel:#0f1624;
-      --card:#111b2c;
-      --text:#e8eefc;
-      --muted:#aeb9d4;
-      --border:rgba(255,255,255,.10);
-      --accent:#7aa2ff;
-      --ok:#7dffb2;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    a{color:inherit}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
-    header{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:22px}
-    .brand{font-weight:700;letter-spacing:.2px}
-    .pill{display:inline-flex;gap:10px;align-items:center;padding:8px 12px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.02)}
-    .hero{padding:22px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(180deg, rgba(122,162,255,.12), rgba(255,255,255,.02))}
-    h1{margin:0 0 10px;font-size:28px;line-height:1.2}
-    .sub{color:var(--muted);max-width:70ch;margin:0}
-    .grid{display:grid;gap:14px;margin-top:16px}
-    @media(min-width:820px){ .grid{grid-template-columns:1.2fr .8fr} }
-    .card{padding:16px;border:1px solid var(--border);border-radius:16px;background:rgba(255,255,255,.02)}
-    h2{margin:0 0 10px;font-size:18px}
-    .list{margin:10px 0 0;padding:0 0 0 18px;color:var(--muted)}
-    .ctaRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 14px;border-radius:12px;border:1px solid var(--border);
-      background:rgba(122,162,255,.18);text-decoration:none;font-weight:600
-    }
-    .btn:hover{filter:brightness(1.06)}
-    .btn.secondary{background:rgba(255,255,255,.04)}
-    .tag{display:inline-block;margin-top:10px;padding:6px 10px;border-radius:999px;border:1px solid var(--border);color:var(--muted)}
-    .small{font-size:13px;color:var(--muted)}
-    .divider{height:1px;background:var(--border);margin:18px 0}
-    .kpi{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .kpi .pill{background:rgba(255,255,255,.03)}
-    footer{margin-top:22px;color:var(--muted);font-size:13px}
-    .warn{border-left:3px solid rgba(255,107,107,.8);padding-left:12px}
-  </style>
+  <title>Santé-Safi — Accompagnement infirmier à distance</title>
+  <meta name="description" content="Accompagnement infirmier à distance via WhatsApp. Écoute, orientation et conseils. Horaires définis. Paiement Mobile Money." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
   <div class="wrap">
+    <div class="topbar">
+      <div class="brand">Santé‑Safi</div>
+      <div class="pill"><span class="dot">●</span><span id="statusText">Réponse durant les horaires affichés</span></div>
+    </div>
 
-    <header>
-      <div class="brand">Santé SAFI ♥ Infirmière</div>
-      <div class="pill" aria-label="Disponibilité">
-        <span style="color:var(--ok);font-weight:700;">●</span>
-        <span id="statusText">Disponibilité selon horaires</span>
-      </div>
-    </header>
-
-    <section class="hero">
-      <h1>Téléconsultation infirmière via WhatsApp</h1>
-      <p class="sub">
-        Pour les compatriotes au Congo : un échange simple, rapide et humain via WhatsApp Business,
-        avec horaires définis et paiement adapté (Mobile Money).
-      </p>
-
-      <div class="ctaRow">
-        <a class="btn" id="waBtn" target="_blank" rel="noopener" href="#">
-          Contacter sur WhatsApp
-        </a>
-        <a class="btn secondary" href="#paiement">Voir les paiements</a>
-        <a class="btn secondary" href="#tarifs">Tarifs</a>
-      </div>
-
-      <div class="kpi">
-        <div class="pill">Réponse sous : <strong>&nbsp;24h ouvrées</strong></div>
-        <div class="pill">Canal : <strong>&nbsp;WhatsApp Business</strong></div>
-        <div class="pill">Paiement : <strong>&nbsp;Mobile Money</strong></div>
-      </div>
-
-      <div class="tag">Service non-urgent — en cas d’urgence : contactez les services d’urgence locaux</div>
+    <!-- Banner -->
+    <section class="hero" aria-label="Bannière">
+      <img src="assets/img/banner-sante-safi.png" alt="Accompagnement infirmier à distance via WhatsApp" />
     </section>
 
     <div class="grid">
-
-      <section class="card">
+      <section class="section">
         <h2>Comment ça marche</h2>
-        <ol class="list">
-          <li>Vous cliquez sur “Contacter sur WhatsApp” et décrivez votre besoin.</li>
-          <li>Vous recevez des questions ciblées (symptômes, contexte, documents si nécessaire).</li>
+        <ol>
+          <li>Vous cliquez sur “Contacter sur WhatsApp” et décrivez votre demande.</li>
+          <li>Vous recevez des questions ciblées (symptômes, contexte, documents si utile).</li>
           <li>Vous obtenez un avis infirmier, des conseils, et si besoin une orientation (médecin/urgence).</li>
         </ol>
 
-        <div class="divider"></div>
+        <div class="ctaRow">
+          <a class="btn whatsapp" id="waBtn" target="_blank" rel="noopener" href="#">
+            Contacter sur WhatsApp
+          </a>
+          <a class="btn primary" href="#paiement">Paiement</a>
+          <a class="btn" href="#horaires">Horaires</a>
+        </div>
 
-        <h2 id="horaires">Horaires de réponse</h2>
-        <p class="small">
-          Les messages reçus hors horaires peuvent recevoir un message automatique “hors bureau”
-          (fonctionnalité WhatsApp Business “Away Message” avec plage horaire). 
+        <p class="small" style="margin-top:10px;">
+          Ce service ne remplace pas une consultation médicale. En cas d’urgence, contactez les services d’urgence locaux.
         </p>
+      </section>
 
-        <ul class="list">
+      <aside class="section">
+        <h2 id="horaires">Horaires de réponse</h2>
+        <ul>
           <li><strong>Lundi–Vendredi :</strong> 18:00 – 21:00</li>
           <li><strong>Samedi :</strong> 10:00 – 13:00</li>
           <li><strong>Dimanche :</strong> fermé</li>
         </ul>
-
-        <p class="small">
-          Exemple de réponse automatique hors horaires :
-          “Bonjour, merci pour votre message. Je réponds durant les horaires affichés. Si c’est urgent, contactez les urgences locales.”
+        <p class="small" style="margin-top:10px;">
+          Hors horaires : un message automatique peut être envoyé via WhatsApp Business (Away message).
         </p>
-      </section>
 
-      <aside class="card">
-        <h2 id="tarifs">Tarifs (exemples)</h2>
-        <p class="small">Ajustez librement selon votre modèle.</p>
-        <ul class="list">
+        <h2 style="margin-top:14px;">Tarifs (exemples)</h2>
+        <ul>
           <li><strong>Question simple (15 min)</strong> : 5–10 USD</li>
           <li><strong>Suivi (30 min)</strong> : 10–15 USD</li>
           <li><strong>Dossier / conseils détaillés</strong> : sur devis</li>
         </ul>
-
-        <div class="divider"></div>
-
-        <h2>Ce que le service n’est pas</h2>
-        <p class="small warn">
-          Pas un service d’urgence. Pas de diagnostic médical définitif. En cas de détresse, douleur thoracique, saignement important,
-          troubles neurologiques, etc. : dirigez-vous vers une structure de soins immédiatement.
-        </p>
       </aside>
-
     </div>
 
-    <section class="card" id="paiement" style="margin-top:14px">
-      <h2>Paiement (adapté Congo)</h2>
-      <p class="small">
-        Pour la RDC, les options Mobile Money les plus courantes incluent notamment M-Pesa (Vodacom), Orange Money et Airtel Money.
-        Pour des paiements depuis l’étranger, des services de transfert vers Mobile Money existent également.
+    <section class="section" id="paiement">
+      <h2>Paiement (Mobile Money)</h2>
+      <p>
+        Paiement possible via Mobile Money (ex. M‑Pesa / Orange Money / Airtel Money).
+        Indiquez une <strong>référence</strong> (Nom + Date) et envoyez la preuve de paiement sur WhatsApp.
       </p>
 
       <div class="ctaRow">
-        <a class="btn secondary" href="#" onclick="alert('À remplacer par vos instructions M-Pesa / Vodacom (numéro, nom, référence).'); return false;">
-          Payer via M-Pesa / Vodacom
-        </a>
-        <a class="btn secondary" href="#" onclick="alert('À remplacer par vos instructions Orange Money (numéro, nom, référence).'); return false;">
-          Payer via Orange Money
-        </a>
-        <a class="btn secondary" href="#" onclick="alert('À remplacer par vos instructions Airtel Money (numéro, nom, référence).'); return false;">
-          Payer via Airtel Money
-        </a>
+        <a class="btn" href="#" onclick="alert('À compléter : instructions M‑Pesa (numéro, nom, référence).'); return false;">M‑Pesa / Vodacom</a>
+        <a class="btn" href="#" onclick="alert('À compléter : instructions Orange Money (numéro, nom, référence).'); return false;">Orange Money</a>
+        <a class="btn" href="#" onclick="alert('À compléter : instructions Airtel Money (numéro, nom, référence).'); return false;">Airtel Money</a>
       </div>
 
-      <p class="small">
-        Astuce opérationnelle : demandez au patient de mettre une <strong>référence</strong> dans le paiement (ex. “Consult + Nom + Date”),
-        et de vous envoyer une <strong>capture</strong> de confirmation sur WhatsApp.
+      <p class="small" style="margin-top:10px;">
+        Astuce : tu peux afficher ici le numéro Mobile Money, le nom du compte, et une référence obligatoire.
       </p>
-
-      <div class="divider"></div>
-
-      <h2>Confidentialité & consentement</h2>
-      <ul class="list">
-        <li>En envoyant un message, vous acceptez que l’échange se fasse via WhatsApp.</li>
-        <li>Évitez d’envoyer des données sensibles inutiles (photos intimes, documents d’identité complets).</li>
-        <li>Vos informations servent uniquement au suivi de votre demande.</li>
-      </ul>
     </section>
 
-    <footer>
-      <p>
-        Mentions : Ce site présente un service de conseil infirmier à distance. Les informations fournies ne remplacent pas une consultation médicale en présentiel.
-      </p>
-    </footer>
+    <section class="section">
+      <h2>Confidentialité & consentement</h2>
+      <ul>
+        <li>En envoyant un message, vous acceptez que l’échange se fasse via WhatsApp.</li>
+        <li>Évitez d’envoyer des données sensibles inutiles.</li>
+        <li>Les informations servent uniquement au traitement de votre demande.</li>
+      </ul>
 
+      <p class="warn" style="margin-top:12px;">
+        Pas un service d’urgence. Si vous êtes en danger immédiat, dirigez‑vous vers une structure de soins sans attendre.
+      </p>
+    </section>
+
+    <div class="footer">
+      <p>
+        Mentions : Ce site présente un service d’accompagnement infirmier à distance. Les informations fournies ne remplacent pas une consultation médicale en présentiel.
+      </p>
+    </div>
   </div>
 
   <script>
     // === CONFIG À MODIFIER ===
-    const WHATSAPP_PHONE_E164 = "+32XXXXXXXXX"; // ex: "+243812345678" (RDC)
-    const DEFAULT_MESSAGE = "Bonjour, je souhaite une téléconsultation infirmière. Voici ma demande : ";
+    const WHATSAPP_PHONE_E164 = "+243XXXXXXXXX"; // ex: "+243812345678" (RDC) ou "+242..." (Congo-Brazzaville)
+    const DEFAULT_MESSAGE = "Bonjour, je souhaite un accompagnement infirmier à distance. Voici ma demande : ";
 
-    // Génère le lien WhatsApp "click to chat"
+    // WhatsApp click-to-chat
     const waUrl = "https://wa.me/" + WHATSAPP_PHONE_E164.replace(/\+/g,"") + "?text=" + encodeURIComponent(DEFAULT_MESSAGE);
     document.getElementById("waBtn").setAttribute("href", waUrl);
 
-    // Petit statut (optionnel) — ici simple texte statique
     document.getElementById("statusText").textContent = "Réponse durant les horaires affichés";
   </script>
 </body>
