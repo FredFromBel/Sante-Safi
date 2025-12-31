@@ -1,4 +1,4 @@
-# Santé‑Safi — dossier site statique
+# Santé‑Safi — dossier site statique4
 
 ## Contenu
 - `index.html`
