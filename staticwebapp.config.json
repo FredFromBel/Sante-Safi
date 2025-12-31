@@ -1,9 +1,5 @@
 {
   "routes": [
-    {
-      "route": "/*",
-      "redirect": "https://sante-safi.be",
-      "statusCode": 301
-    }
+    { "route": "/*", "redirect": "https://sante-safi.be", "statusCode": 301 }
   ]
 }
