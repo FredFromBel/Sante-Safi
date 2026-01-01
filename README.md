@@ -1,5 +1,5 @@
 # Santé‑Safi — dossier site statique
-
+init deployment
 ## Contenu
 - `index.html`
 - `assets/css/styles.css`
