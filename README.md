@@ -1,4 +1,4 @@
-# Santé‑Safi — dossier site statique
+# Santé‑Safi — dossier site statique 6
 init deployment
 ## Contenu
 - `index.html`
