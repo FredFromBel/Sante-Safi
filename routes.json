@@ -1,0 +1,10 @@
+
+{
+  "routes": [
+    {
+      "route": "/*",
+      "statusCode": 301,
+      "redirect": "https://www.sante-safi.be"
+    }
+  ]
+}
