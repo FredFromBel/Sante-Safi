@@ -16,21 +16,26 @@ jobs:
     name: Build and Deploy Job
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Build And Deploy
+      - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_<HOSTNAME_REEL> }}
+          # 🔐 SECRET EXACT (À NE PAS MODIFIER)
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_CALM_SMOKE_0E4866503 }}
+
+          # GitHub integration (PR comments, etc.)
           repo_token: ${{ secrets.GITHUB_TOKEN }}
+
           action: upload
 
-          # 🔑 SITE STATIQUE PUR
+          # 📁 SITE STATIQUE PUR
           app_location: "/"
           api_location: ""
           output_location: ""
 
-          # 🔥 POINT CRITIQUE
+          # 🚫 AUCUN BUILD
           skip_app_build: true
           skip_api_build: true
 
@@ -43,5 +48,5 @@ jobs:
       - name: Close Pull Request
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_<HOSTNAME_REEL> }}
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_CALM_SMOKE_0E4866503 }}
           action: close
