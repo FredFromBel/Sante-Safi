@@ -23,23 +23,24 @@ jobs:
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          # 🔐 Secret — choisis un nom simple et cohérent
+          # 🔐 Secret standardisé (créé à l'étape 1)
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
 
-          # GitHub token natif (pas besoin d'ajouter comme secret)
+          # Jeton GitHub natif (pour les PR & checks)
           repo_token: ${{ github.token }}
 
+          # Action
           action: "upload"
 
-          # 📁 Site statique à la racine du repo
+          # 📁 Site statique à la racine (index.html)
           app_location: "/"
           api_location: ""
 
-          # 🚫 Aucun build (Oryx ne sera pas appelé)
+          # 🚫 Pas de build
           skip_app_build: true
           skip_api_build: true
 
-          # 🔎 Dossier qui sera servi (ici la racine)
+          # 🔎 Upload de la racine
           output_location: "/"
 
   close_pull_request_job:
