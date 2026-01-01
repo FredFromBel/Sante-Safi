@@ -1,3 +1,4 @@
+
 name: Azure Static Web Apps CI/CD
 
 on:
@@ -17,27 +18,29 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Deploy to Azure Static Web Apps
         uses: Azure/static-web-apps-deploy@v1
         with:
-          # 🔐 SECRET EXACT (À NE PAS MODIFIER)
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_CALM_SMOKE_0E4866503 }}
+          # 🔐 Secret — choisis un nom simple et cohérent
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
 
-          # GitHub integration (PR comments, etc.)
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          # GitHub token natif (pas besoin d'ajouter comme secret)
+          repo_token: ${{ github.token }}
 
-          action: upload
+          action: "upload"
 
-          # 📁 SITE STATIQUE PUR
+          # 📁 Site statique à la racine du repo
           app_location: "/"
           api_location: ""
-          output_location: ""
 
-          # 🚫 AUCUN BUILD
+          # 🚫 Aucun build (Oryx ne sera pas appelé)
           skip_app_build: true
           skip_api_build: true
+
+          # 🔎 Dossier qui sera servi (ici la racine)
+          output_location: "/"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
@@ -48,5 +51,5 @@ jobs:
       - name: Close Pull Request
         uses: Azure/static-web-apps-deploy@v1
         with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_CALM_SMOKE_0E4866503 }}
-          action: close
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          action: "close"
