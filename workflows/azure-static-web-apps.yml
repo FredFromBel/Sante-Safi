@@ -32,7 +32,7 @@ jobs:
           # Action
           action: "upload"
 
-          # 📁 Site statique à la racine
+          # 📁 Site statique à la racine.
           app_location: "/"
           api_location: ""
 
