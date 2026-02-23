@@ -6,6 +6,47 @@
   <title>Santé-Safi — Accompagnement infirmier à distance</title>
   <meta name="description" content="Accompagnement infirmier à distance via WhatsApp. Écoute, orientation et conseils. Horaires définis. Paiement Mobile Money." />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .payment-card{
+      margin:14px 0 0;
+      padding:16px 20px;
+      border:1px solid rgba(255,152,0,.35);
+      border-radius:14px;
+      background:rgba(255,152,0,.06);
+      max-width:440px;
+    }
+    .payment-card-header{margin-bottom:12px}
+    .payment-badge{
+      display:inline-block;
+      background:#ff6600;
+      color:#fff;
+      font-weight:700;
+      font-size:12px;
+      padding:3px 10px;
+      border-radius:999px;
+      letter-spacing:.4px;
+    }
+    .payment-table{border-collapse:collapse;width:100%}
+    .payment-table tr+tr td{padding-top:7px}
+    .payment-label{
+      color:var(--muted);
+      font-size:13px;
+      padding-right:14px;
+      white-space:nowrap;
+      vertical-align:top;
+    }
+    .payment-value{
+      font-weight:700;
+      font-size:15px;
+      color:var(--text);
+    }
+    .payment-hint{
+      font-weight:400;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .payment-hint em{opacity:.75}
+  </style>
 </head>
 
 <body>
@@ -24,7 +65,7 @@
       <section class="section">
         <h2>Comment ça marche</h2>
         <ol>
-          <li>Vous cliquez sur “Contacter sur WhatsApp” et décrivez votre demande.</li>
+          <li>Vous cliquez sur "Contacter sur WhatsApp" et décrivez votre demande.</li>
           <li>Vous recevez des questions ciblées (symptômes, contexte, documents si utile).</li>
           <li>Vous obtenez un avis infirmier, des conseils, et si besoin une orientation (médecin/urgence).</li>
         </ol>
@@ -38,7 +79,7 @@
         </div>
 
         <p class="small" style="margin-top:10px;">
-          Ce service ne remplace pas une consultation médicale. En cas d’urgence, contactez les services d’urgence locaux.
+          Ce service ne remplace pas une consultation médicale. En cas d'urgence, contactez les services d'urgence locaux.
         </p>
       </section>
 
@@ -47,7 +88,7 @@
         <ul>
           <li><strong>Lundi–Vendredi :</strong> 08:00 – 21:00</li>
           <li><strong>Samedi :</strong> 08:00 – 21:00</li>
-          <li><strong>Dimanche :</strong> 08:00 – 21:00 </li>
+          <li><strong>Dimanche :</strong> 08:00 – 21:00</li>
         </ul>
         <p class="small" style="margin-top:10px;">
           Hors horaires : un message automatique peut être envoyé via WhatsApp Business (Away message).
@@ -65,47 +106,59 @@
     <section class="section" id="paiement">
       <h2>Paiement (Mobile Money)</h2>
       <p>
-        Paiement possible via Mobile Money (ex. M‑Pesa / Orange Money / Airtel Money).
-        Indiquez une <strong>référence</strong> (Nom + Date) et envoyez la preuve de paiement sur WhatsApp.
+        Paiement via <strong>Orange Money</strong>. Indiquez une <strong>référence</strong> (Votre Nom + Date)
+        et envoyez la preuve de paiement sur WhatsApp après le virement.
       </p>
 
-      <div class="ctaRow">
-        <a class="btn" href="#" onclick="alert('À compléter : instructions M‑Pesa (numéro, nom, référence).'); return false;">M‑Pesa / Vodacom</a>
-        <a class="btn" href="#" onclick="alert('À compléter : instructions Orange Money (numéro, nom, référence).'); return false;">Orange Money</a>
-        <a class="btn" href="#" onclick="alert('À compléter : instructions Airtel Money (numéro, nom, référence).'); return false;">Airtel Money</a>
+      <div class="payment-card">
+        <div class="payment-card-header">
+          <span class="payment-badge">Orange Money</span>
+        </div>
+        <table class="payment-table">
+          <tr>
+            <td class="payment-label">Numéro</td>
+            <td class="payment-value">+243 800 364 455</td>
+          </tr>
+          <tr>
+            <td class="payment-label">Nom du compte</td>
+            <td class="payment-value">Bebe Yowano Wangunwa</td>
+          </tr>
+          <tr>
+            <td class="payment-label">Référence</td>
+            <td class="payment-value payment-hint">Votre Nom + Date &nbsp;<em>(ex : Jean 23juin)</em></td>
+          </tr>
+        </table>
       </div>
 
-      <p class="small" style="margin-top:10px;">
-        Astuce : tu peux afficher ici le numéro Mobile Money, le nom du compte, et une référence obligatoire.
+      <p class="small" style="margin-top:12px;">
+        Après le paiement, envoyez la capture d'écran de confirmation sur WhatsApp avec votre référence.
       </p>
     </section>
 
     <section class="section">
-      <h2>Confidentialité & consentement</h2>
+      <h2>Confidentialité &amp; consentement</h2>
       <ul>
-        <li>En envoyant un message, vous acceptez que l’échange se fasse via WhatsApp.</li>
-        <li>Évitez d’envoyer des données sensibles inutiles.</li>
+        <li>En envoyant un message, vous acceptez que l'échange se fasse via WhatsApp.</li>
+        <li>Évitez d'envoyer des données sensibles inutiles.</li>
         <li>Les informations servent uniquement au traitement de votre demande.</li>
       </ul>
 
       <p class="warn" style="margin-top:12px;">
-        Pas un service d’urgence. Si vous êtes en danger immédiat, dirigez‑vous vers une structure de soins sans attendre.
+        Pas un service d'urgence. Si vous êtes en danger immédiat, dirigez‑vous vers une structure de soins sans attendre.
       </p>
     </section>
 
     <div class="footer">
       <p>
-        Mentions : Ce site présente un service d’accompagnement infirmier à distance. Les informations fournies ne remplacent pas une consultation médicale en présentiel.
+        Mentions : Ce site présente un service d'accompagnement infirmier à distance. Les informations fournies ne remplacent pas une consultation médicale en présentiel.
       </p>
     </div>
   </div>
 
   <script>
-    // === CONFIG À MODIFIER ===
-    const WHATSAPP_PHONE_E164 = "+243800364455"; // ex: "+243812345678" (RDC) ou "+242..." (Congo-Brazzaville)
+    const WHATSAPP_PHONE_E164 = "+243800364455";
     const DEFAULT_MESSAGE = "Bonjour, je souhaite un accompagnement infirmier à distance. Voici ma demande : ";
 
-    // WhatsApp click-to-chat
     const waUrl = "https://wa.me/" + WHATSAPP_PHONE_E164.replace(/\+/g,"") + "?text=" + encodeURIComponent(DEFAULT_MESSAGE);
     document.getElementById("waBtn").setAttribute("href", waUrl);
 
